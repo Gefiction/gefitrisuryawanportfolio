@@ -27,7 +27,7 @@ header nav{display:flex;gap:18px}header nav a{text-decoration:none;color:var(--m
 #pg{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--ac);transform:scaleX(0);transform-origin:0}
 .hero{display:grid;gap:36px;align-items:center;padding:clamp(40px,9vw,110px) 20px 36px}
 .hero p.k{color:var(--mu);margin:0 0 8px}
-h1{margin:0;font-weight:800;line-height:.82;letter-spacing:-.05em;font-size:clamp(4.5rem,18vw,11rem)}
+h1{margin:0;font-weight:800;line-height:.82;letter-spacing:-.05em;font-size:clamp(5rem,24vw,17rem)}
 h1 span{display:inline-block;animation:up .8s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*90ms)}
 @keyframes up{from{transform:translateY(105%) rotate(6deg);opacity:0}}
 .sn{font:italic 400 clamp(2.4rem,9vw,6rem)/1 var(--sf);color:var(--ac);margin:6px 0 22px;animation:up .9s .4s both}
@@ -83,14 +83,11 @@ footer{border-top:1px solid var(--ln);padding:34px 0;color:var(--mu);font-size:.
 footer b{display:block;font:italic 2.4rem var(--sf);color:var(--fg)}
 @media(max-width:700px){header nav{display:none}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-@media(min-width:860px){.hero{grid-template-columns:7fr 4fr}}
-.pt{margin:0;position:relative;justify-self:center;width:min(100%,380px)}
-.pt::before{content:"";position:absolute;inset:18px -18px -18px 18px;border-radius:20px;background:var(--ac);transition:transform .4s}
-.pt img{position:relative;display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;object-position:50% 12%;border-radius:20px;transition:transform .4s;animation:up 1s .3s both}
-.pt:hover::before{transform:translate(8px,8px)}.pt:hover img{transform:translate(-6px,-6px)}
 .mono{display:block;object-fit:cover;object-position:50% 14%}
 .gl img{width:100%;height:auto;border-radius:10px;display:block;background:var(--cd)}
 .gn{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:10px}.gn[hidden]{display:none}
+.pz{all:unset;display:block;width:120px;height:120px;border-radius:50%;margin-bottom:18px;cursor:zoom-in}.pz:focus-visible{outline:2px solid var(--ac);outline-offset:4px}.pz .mono{margin-bottom:0}
+.lb{width:fit-content;max-height:none;overflow:hidden;background:none}.lb img{display:block;width:auto;height:auto;max-width:100%;max-height:88vh;border-radius:18px}.lb .x{background:rgba(0,0,0,.5)}.lb .x:hover{background:#fff;color:#111}
 </style></head>
 <body>
 <header><div class="w"><a class="lg" href="#top">Gefi Trisuryawan</a>
@@ -105,13 +102,13 @@ footer b{display:block;font:italic 2.4rem var(--sf);color:var(--fg)}
 <div class="rot">Saya <b id="rt">Creative Director</b></div>
 <p class="lead">Creative Director &amp; Senior Graphic Designer dari Solo. Mengubah tujuan bisnis menjadi konsep kreatif, identitas brand, dan karya visual yang relevan dengan audiensnya.</p>
 <a class="bt ac" href="#work">Lihat karya</a> <a class="bt" href="#contact">Hubungi saya</a>
-<div class="st"><div><strong data-n="19">0</strong>tahun berkarya (sejak 2007)</div><div><strong id="np" data-n="0">0</strong>project dipamerkan</div><div><strong data-n="32">0</strong>logo di Logofolio</div></div></div><figure class="pt"><img id="hp" alt="Foto Gefi Trisuryawan" width="380" height="570"></figure>
+<div class="st"><div><strong data-n="19">0</strong>tahun berkarya (sejak 2007)</div><div><strong id="np" data-n="0">0</strong>project dipamerkan</div><div><strong data-n="32">0</strong>logo di Logofolio</div></div></div>
 </div>
 <div class="mq" aria-hidden="true"><div id="mq"></div></div>
 
 <section id="about"><div class="w ab"><div>
 <h2>About <i>Me</i></h2>
-<img class="mono" id="ap" alt="Gefi Trisuryawan" width="120" height="120">
+<button class="pz" id="pz" title="Klik untuk melihat foto lengkap" aria-label="Lihat foto lengkap Gefi Trisuryawan"><img class="mono" id="ap" alt="Gefi Trisuryawan" width="120" height="120"></button>
 <p>Profesional kreatif dengan keahlian dalam strategi kreatif, pengembangan brand, komunikasi visual, dan kampanye pemasaran. Terbiasa menerjemahkan tujuan bisnis menjadi konsep kreatif dan komunikasi brand yang relevan dengan audiens. Memiliki kemampuan memimpin tim, mengarahkan pengembangan ide, serta mengelola eksekusi proyek dan kolaborasi lintas brand.</p>
 <h3>Core Competencies</h3>
 <ul class="ch"><li>Creative Direction &amp; Leadership</li><li>Brand Strategy &amp; Development</li><li>Creative Campaign &amp; Art Direction</li><li>Visual Communication &amp; Brand Identity</li><li>Creative Team &amp; Project Management</li><li>Integrated Marketing Communication</li><li>Brand Collaboration</li><li>Content Development</li></ul>
@@ -145,6 +142,7 @@ footer b{display:block;font:italic 2.4rem var(--sf);color:var(--fg)}
 <footer><b>Thank You</b>© 2026 Gefi Trisuryawan</footer>
 
 <dialog id="dg"><div class="mh" id="mh"></div><div class="mb" id="mb"></div></dialog>
+<dialog id="pd" class="lb"><button class="bt x" aria-label="Tutup foto">Tutup</button><img id="pi" alt="Foto lengkap Gefi Trisuryawan"></dialog>
 <script>
 const IM=["assets/danarhadi-jacket-techpack.jpg", "assets/danarhadi-jacket-photos.jpg", "assets/bulls-arlinax-techpack.jpg", "assets/bulls-arlinax-photos.jpg", "assets/pertamina-fastron-jacket.jpg", "assets/logofolio.jpg", "assets/yume-japanese-bread.jpg", "assets/haikai.jpg", "assets/sania-royale.jpg", "assets/sriaji-mascot.jpg", "assets/sriaji-applications.jpg", "assets/for-revenge-merch.jpg", "assets/sore-merch.jpg", "assets/the-pink-sweet-merch.jpg", "assets/sunrise-merch.jpg", "assets/rown-division-social.jpg", "assets/acoller-social.jpg", "assets/dayday-social.jpg", "assets/teapot-social.jpg", "assets/print-design.jpg", "assets/product-label.jpg", "assets/packaging-design.jpg", "assets/kitsuden-nft.jpg", "assets/illustration-artwork.jpg", "assets/danarhadi-snapback-techpack.jpg"],PG=[[0,1,24],[2,3],[4],[5],[6],[7],[8],[9,10],[11],[12],[13],[14],[15],[16],[17],[18],[19],[20],[21],[22],[23]],C=[1,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19,20,21,22,23],PF="assets/gefi-portrait.jpg";
 const CD="Creative Direction",AD="Art Direction",GD="Graphic Designer",LY="Layouter",CW="Copy Writer",CN="Conceptor",IL="Illustrator";
@@ -193,6 +191,8 @@ document.querySelectorAll("[data-n]").forEach(el=>{const n=+el.dataset.n,t0=perf
 $("th").onclick=()=>{const r=document.documentElement,d=(r.dataset.theme||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light"))=="dark";r.dataset.theme=d?"light":"dark"};
 $("em").onclick=async()=>{try{await navigator.clipboard.writeText("gefitrisuryawan@gmail.com");$("et").textContent="Email tersalin"}catch(e){location.href="mailto:gefitrisuryawan@gmail.com"}setTimeout(()=>$("et").textContent="gefitrisuryawan@gmail.com",1800)};
 addEventListener("scroll",()=>{const h=document.documentElement;$("pg").style.transform=`scaleX(${h.scrollTop/(h.scrollHeight-h.clientHeight)||0})`},{passive:true});
-$("hp").src=PF;$("ap").src=PF;
+$("ap").src=PF;
+const pd=$("pd"),PFU="assets/gefi-portrait-full.jpg";
+$("pz").onclick=()=>{$("pi").src=PFU;pd.showModal()};pd.onclick=()=>pd.close();
 </script>
 </body></html>
